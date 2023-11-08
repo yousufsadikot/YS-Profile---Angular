@@ -1,0 +1,76 @@
+<!-- Nav -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+  appScrollListener
+>
+  <div class="container">
+    <a class="navbar-brand logo" href="#">
+      <img src="assets/img/loop-logo-white.png" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="container collapse navbar-collapse"
+      id="navbarColor03"
+      [ngbCollapse]="isCollapsed"
+      [ngClass]="navClass ? 'd-flex flex-row-reverse' : ''"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#about-me"
+            [appScrollAdjust]="30"
+            appCloseNav
+            >About me</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#work-experience"
+            [appScrollAdjust]="30"
+            appCloseNav
+            >Work Experience</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Nav end -->
+<div class="main-content">
+  <div class="header-content">
+    <div class="box">
+      <section>
+        <div id="text">
+          <app-hero-banner></app-hero-banner>
+        </div>
+      </section>
+    </div>
+    <!-- Hero -->
+  </div>
+  <div class="section-white" id="about-me">
+    <app-about-me></app-about-me>
+  </div>
+  <div class="section-light" id="work-experience">
+    <app-work-experience></app-work-experience>
+  </div>
+</div>
