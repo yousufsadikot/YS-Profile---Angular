@@ -49,7 +49,14 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#skills" [appScrollAdjust]="30" appCloseNav
+            >Technical Skills</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" [appScrollAdjust]="30" appCloseNav
+            >Contact Me</a
+          >
         </li>
       </ul>
     </div>
@@ -68,9 +75,24 @@
     <!-- Hero -->
   </div>
   <div class="section-white" id="about-me">
-    <app-about-me></app-about-me>
+    <div class="container">
+      <app-about-me></app-about-me>
+    </div>
   </div>
   <div class="section-light" id="work-experience">
-    <app-work-experience></app-work-experience>
+    <div class="container">
+      <app-work-experience></app-work-experience>
+    </div>
+  </div>
+
+  <div class="section-white" id="skills">
+    <div class="container">
+      <app-technical-skills></app-technical-skills>
+    </div>
+  </div>
+  <div class="section-light" id="contact">
+    <div class="container">
+      <app-contacts></app-contacts>
+    </div>
   </div>
 </div>

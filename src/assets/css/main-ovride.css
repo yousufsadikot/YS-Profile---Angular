@@ -21,7 +21,8 @@ body {
 
 .navbar-light {
   --bs-bg-opacity: 1;
- background-color: rgb(245, 245, 245)!important; 
+ background-color: rgb(245, 245, 245)!important;
+ border-bottom: 1px solid rgb(206, 206, 206)!important;; 
 }
 .navbar-brand img {
   width: 265px;
@@ -37,8 +38,8 @@ body {
 
 .header-content{
     height: 100vh;
-    width: 100%;
-    background-color: black;
+    width : 100%;
+    background-color: rgb(255, 255, 255);
 }
 
 section {
@@ -68,7 +69,7 @@ section::after
     position: absolute;
     top:0;
     left:0;
-    width: 100%;
+   width: 100%;
     height: 100%;
     z-index: 10000;
     mix-blend-mode: color;
@@ -99,7 +100,7 @@ section::after
 .section-light{
     padding: 50px 0;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #f7f7f7;
 }
 
 .section-white{
@@ -115,9 +116,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
+.section-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .section-heading h2 {
   font-size: 3em;
   color: #ffae3f;
+  text-transform: uppercase;
 }
 .section-heading p {
   font-size: 1.5em;
@@ -186,5 +193,44 @@ ul.job-description  {
 ul.job-description li{
   margin-left: 20px;
   padding-bottom: 10px!important;
+}
+
+/************** Technical Skilss *************/
+.skill-item{
+  padding-left: 13px
+}
+
+.skill-item h3 {
+  font-weight: 400;
+}
+
+.skill-item ul li div {
+  font-weight: 700;
+}
+
+.skill-item ul {
+  list-style-type: none!important;
+  list-style-position: inside!important;
+  padding-left: 0!important;
+
+}
+
+/************** contact *************/
+
+.contact .contact-icons{
+  font-size: 2rem;
+  padding-right: 15px;
+  position: relative;
+  top:-3px;
+}
+
+.contact-icons .icon-shadow {
+  color: #ffffff;
+  text-shadow: 0 22px 10px rgba(5, 5, 5, 0.8);
+  font-size: 13px;
+  /* z-index: -1; */
+  position: absolute;
+  top: 13px;
+  left: 7px;
 }
 

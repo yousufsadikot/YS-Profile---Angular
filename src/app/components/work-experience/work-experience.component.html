@@ -1,58 +1,14 @@
 <div *appScreenSize="['xs', 'sm']">
-  <div id="experience" class="container">
-    <div class="experience section-heading">
-      <h2>Work Experience</h2>
-      <p>With more than 15 years of experience in the online domain</p>
-      <hr />
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngFor="let experience of workExperience">
-          <div class="job-profile">
-            <div class="company-logo">
-              <a [href]="experience.href" target="_blank">
-                <img [src]="experience.logo" alt="RBC" />
-              </a>
-            </div>
-            <div class="experience-section">
-              <h3>{{ experience.title }}</h3>
-              <p>
-                <strong
-                  >{{ experience.startDate }} - {{ experience.endDate }}</strong
-                >
-              </p>
-              <p>{{ experience.company }}, {{ experience.location }}</p>
-            </div>
-          </div>
-
-          <!-- Job discription -->
-          <ul class="job-brief">
-            <li>{{ experience.jobBrief }}</li>
-          </ul>
-
-          <ul class="job-description">
-            <li *ngFor="let lists of experience.jobDiscription">
-              {{ lists.dayToday }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="experience section-heading">
+    <h2>Work Experience</h2>
+    <p>With more than 15 years of experience in the online domain</p>
+    <hr />
   </div>
-</div>
 
-<div *appScreenSize="['md', 'lg', 'xl']">
-  <div id="experience" class="container">
-    <div class="experience section-heading">
-      <h2>Work Experience</h2>
-      <p>With more than 15 years of experience in the online domain</p>
-      <hr />
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="job-profile" *ngFor="let experience of workExperience">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let experience of workExperience">
+        <div class="job-profile">
           <div class="company-logo">
             <a [href]="experience.href" target="_blank">
               <img [src]="experience.logo" alt="RBC" />
@@ -66,40 +22,80 @@
               >
             </p>
             <p>{{ experience.company }}, {{ experience.location }}</p>
-
-            <ul class="job-brief">
-              <li>{{ experience.jobBrief }}</li>
-            </ul>
-
-            <ul class="job-description">
-              <li *ngFor="let lists of experience.jobDiscription">
-                {{ lists.dayToday }}
-              </li>
-            </ul>
           </div>
         </div>
 
-        <!-- Download resume -->
-        <div class="col-centered">
-          <h4>Download Resume</h4>
-        </div>
-        <div class="col-centered">
-          <a
-            class="download-doc-icon"
-            href="assets/resume/ys-resume.doc"
-            download
-          >
-            <img src="assets/img/word-icon.svg" />
+        <!-- Job discription -->
+        <ul class="job-brief">
+          <li>{{ experience.jobBrief }}</li>
+        </ul>
+
+        <ul class="job-description">
+          <li *ngFor="let lists of experience.jobDiscription">
+            {{ lists.dayToday }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *appScreenSize="['md', 'lg', 'xl']">
+  <div class="experience section-heading">
+    <h2>Work Experience</h2>
+    <p>With more than 15 years of experience in the online domain</p>
+    <hr />
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="job-profile" *ngFor="let experience of workExperience">
+        <div class="company-logo">
+          <a [href]="experience.href" target="_blank">
+            <img [src]="experience.logo" alt="RBC" />
           </a>
-          <a
-            class="download-doc-icon"
-            href="assets/resume/ys-resume.pdf"
-            target="_blank"
-            download
-          >
-            <img src="assets/img/pdf-icon.svg" />
-          </a>
         </div>
+        <div class="experience-section">
+          <h3>{{ experience.title }}</h3>
+          <p>
+            <strong
+              >{{ experience.startDate }} - {{ experience.endDate }}</strong
+            >
+          </p>
+          <p>{{ experience.company }}, {{ experience.location }}</p>
+
+          <ul class="job-brief">
+            <li>{{ experience.jobBrief }}</li>
+          </ul>
+
+          <ul class="job-description">
+            <li *ngFor="let lists of experience.jobDiscription">
+              {{ lists.dayToday }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Download resume -->
+      <div class="col-centered">
+        <h4>Download Resume</h4>
+      </div>
+      <div class="col-centered">
+        <a
+          class="download-doc-icon"
+          href="assets/resume/ys-resume.doc"
+          download
+        >
+          <img src="assets/img/word-icon.svg" />
+        </a>
+        <a
+          class="download-doc-icon"
+          href="assets/resume/ys-resume.pdf"
+          target="_blank"
+          download
+        >
+          <img src="assets/img/pdf-icon.svg" />
+        </a>
       </div>
     </div>
   </div>

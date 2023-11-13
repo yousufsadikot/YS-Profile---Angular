@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -9,8 +11,10 @@ import {
   NgbScrollSpyModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 //Services
 import { WorkExperienceService } from './services/work-experience.service';
+import { TechnicaSkillsService } from './services/technica-skills.service';
 //Directives
 import { ParallaxDirective } from './directives/parallax.directive';
 import { ScrollListenerDirective } from './directives/scroll-listener.directive';
@@ -48,12 +52,14 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
     NgbDropdownModule,
     NgbScrollSpyModule,
     NgbCollapseModule,
+    NgbCarouselModule,
   ],
-  providers: [WorkExperienceService],
+  providers: [WorkExperienceService, TechnicaSkillsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

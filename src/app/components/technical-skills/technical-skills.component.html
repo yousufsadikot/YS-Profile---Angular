@@ -1,1 +1,119 @@
-<p>technical-skills works!</p>
+<div class="section-heading">
+  <h2>Technical skills</h2>
+  <p>
+    I wield extensive expertise across a diverse spectrum of design and online
+    development technologies
+  </p>
+  <hr />
+</div>
+<div class="section-content">
+  <div class="row">
+    <div
+      class="col-md-4"
+      *ngFor="let skills of technical"
+      style="position: relative"
+    >
+      <div class="d-flex" style="position: relative">
+        <div class="service-icon"><i [ngClass]="skills.iconGra"></i></div>
+        <div class="skill-item">
+          <h3>{{ skills.stackTitle }}</h3>
+          <p>
+            {{ skills.stackDescription }}
+          </p>
+          <!-- the list -->
+          <ul class="stackList">
+            <li>
+              <div>{{ skills.stackOne }}</div>
+              <ul>
+                <li *ngFor="let stack1 of skills.stackOneList">
+                  {{ stack1.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div>{{ skills.stackTwo }}</div>
+              <ul>
+                <li *ngFor="let stack2 of skills.stackTwoList">
+                  {{ stack2.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackThree">
+              <div>{{ skills.stackThree }}</div>
+              <ul>
+                <li *ngFor="let stack3 of skills.stackThreeList">
+                  {{ stack3.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackFour">
+              <div>{{ skills.stackFour }}</div>
+              <ul>
+                <li *ngFor="let stack4 of skills.stackFourList">
+                  {{ stack4.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackFive">
+              <div>{{ skills.stackFive }}</div>
+              <ul>
+                <li *ngFor="let stack5 of skills.stackFiveList">
+                  {{ stack5.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackSix">
+              <div>{{ skills.stackSix }}</div>
+              <ul>
+                <li *ngFor="let stack6 of skills.stackSixList">
+                  {{ stack6.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackSeven">
+              <div>{{ skills.stackSeven ? skills.stackSeven : null }}</div>
+              <ul>
+                <li *ngFor="let stack7 of skills.stackSevenList">
+                  {{ stack7.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackEight">
+              <div>{{ skills.stackEight }}</div>
+              <ul>
+                <li *ngFor="let stack8 of skills.stackEightList">
+                  {{ stack8.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackNine">
+              <div>{{ skills.stackNine }}</div>
+              <ul>
+                <li *ngFor="let stack9 of skills.stackNineList">
+                  {{ stack9.program }}
+                </li>
+              </ul>
+            </li>
+
+            <li *ngIf="skills.stackTen">
+              <div>{{ skills.stackTen }}</div>
+              <ul>
+                <li *ngFor="let stack10 of skills.stackNineList">
+                  {{ stack10.program }}
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
