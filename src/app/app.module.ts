@@ -12,6 +12,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { CaroselModule } from '../app/components/carousel/carosel.module';
 //Services
 import { WorkExperienceService } from './services/work-experience.service';
 import { TechnicaSkillsService } from './services/technica-skills.service';
@@ -58,6 +59,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NgbScrollSpyModule,
     NgbCollapseModule,
     NgbCarouselModule,
+    CaroselModule,
   ],
   providers: [WorkExperienceService, TechnicaSkillsService],
   bootstrap: [AppComponent],
