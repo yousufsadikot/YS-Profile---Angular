@@ -4,11 +4,11 @@ import { Directive, Input, ElementRef, HostListener } from '@angular/core';
   selector: '[appScrollAdjust]',
 })
 export class ScrollAdjustDirective {
+  private adjustAmount: number = 30;
+
   @Input() set appScrollAdjust(adjustAmount: number) {
     this.adjustAmount = adjustAmount;
   }
-
-  private adjustAmount: number = 0;
 
   constructor(private el: ElementRef) {}
 

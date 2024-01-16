@@ -23,6 +23,8 @@ import { ScreenSizeDirective } from './directives/screen-size.directive';
 import { ScrollAdjustDirective } from './directives/scroll-adjust.directive';
 import { CloseNavDirective } from './directives/close-nav.directive';
 
+import { SmoothScrollDirective } from './directives/scroll-to-thirty.directive';
+
 //components
 import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -49,6 +51,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ScreenSizeDirective,
     ScrollAdjustDirective,
     CloseNavDirective,
+    SmoothScrollDirective,
   ],
   imports: [
     BrowserModule,

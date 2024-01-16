@@ -9,11 +9,50 @@
     
     .carousel-container img {
         display: none;
+        height: 100vh;
+        width: inherit;
     }
     
     .carousel-container img.image-active {
         display: block;
-        width: 100%;
+    }
+
+    .carousel-container .image-active {
+        display: block;
+    }
+    
+    .text-carousel {
+        position: absolute;
+        padding: 0;
+        top: 287px;
+        right: 233px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .text-carousel-third {
+        position: absolute;
+        width: 400px;
+        padding: 0;
+        top: 287px;
+        right: 233px;
+        color: #fff;
+        text-align: left;
+    }
+
+    .title-carousel {
+        transition: opasity 0.6s ease;
+        opacity: 0.8;
+        font-size: 5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 90px;
+    }
+    
+    .caption-carousel {
+        font-size: 1.7rem;
+        line-height: 32px;
+        color: orange;
     }
     
     .carousel-pause-container {
@@ -121,3 +160,6 @@
         display: block;
         cursor: pointer;
     }
+
+    
+

@@ -1,8 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 interface CarcelImages {
   imageSrc: string;
   imageAlt: string;
+  title: string;
+  caption: string;
+  buttonLabel: string;
+  link: string;
 }
 
 @Component({
@@ -11,6 +21,8 @@ interface CarcelImages {
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit {
+  private adjustAmount: number = 30;
+
   @Input() images: CarcelImages[] = [];
   @Input() indicators = true;
   @Input() controls = true;
@@ -22,11 +34,36 @@ export class CarouselComponent implements OnInit {
 
   selectedIndex = 0;
 
+  get backgroundImage() {
+    return `url(${this.images[this.selectedIndex].imageSrc})`;
+  }
+
+  constructor(private el: ElementRef) {}
+
   ngOnInit(): void {
     if (this.autoSlide) {
       this.autoSlideImages();
     }
   }
+  // @HostListener('click', ['$event'])
+  // onClick(event: Event) {
+  //   event.preventDefault();
+
+  //   // Check if 'href' attribute exists
+  //   const hrefAttribute = this.el.nativeElement.getAttribute('href');
+  //   if (!hrefAttribute) {
+  //     console.error("Missing 'href' attribute on the element.");
+  //     return;
+  //   }
+
+  //   const targetId = hrefAttribute.substring(1);
+  //   const targetElement = document.getElementById(targetId);
+
+  //   if (targetElement) {
+  //     const targetOffset = targetElement.offsetTop - this.adjustAmount;
+  //     window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+  //   }
+  // }
 
   autoSlideImages(): void {
     setInterval(() => {

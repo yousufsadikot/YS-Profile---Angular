@@ -6,7 +6,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'ys-profile';
   public isCollapsed = true;
   adjustmentValue: number = 30;
   innerWidth!: number;
@@ -14,24 +13,29 @@ export class AppComponent implements OnInit {
 
   images = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1460627390041-532a28402358?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      imageAlt: 'nature1',
+      imageSrc: './assets/images/sliders/slider1.jpg',
+      imageAlt: 'Yousuf Sadikot',
+      title: 'handcrafted',
+      caption: 'Built to provide great user experience',
+      buttonLabel: 'About me',
+      link: '#about-me',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      imageAlt: 'nature2',
+      imageSrc: './assets/images/sliders/slider2.jpg',
+      imageAlt: 'Life Cycle',
+      title: 'Lifecycle',
+      caption: 'Experience in the lifecycle process spanning many years',
+      buttonLabel: 'Work',
+      link: '#work-experience',
     },
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1640844444545-66e19eb6f549?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
-      imageAlt: 'person1',
-    },
-    {
-      imageSrc:
-        'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-      imageAlt: 'person2',
+      imageSrc: './assets/images/sliders/slider3.jpg',
+      imageAlt: 'UX',
+      title: 'Design',
+      caption:
+        'Bring a unique blend of creative vision and technical proficiency to deliver exceptional user experiences',
+      buttonLabel: 'Skills',
+      link: '#skills',
     },
   ];
 
