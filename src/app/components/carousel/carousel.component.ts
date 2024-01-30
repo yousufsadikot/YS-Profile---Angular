@@ -27,7 +27,7 @@ export class CarouselComponent implements OnInit {
   @Input() indicators = true;
   @Input() controls = true;
   @Input() autoSlide = true;
-  @Input() slideInteral = 3000; // Default to seconds
+  @Input() slideInteral = 10000; // Default to seconds
 
   private isPaused: boolean = false;
   pauseButton = false;
@@ -42,7 +42,7 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.autoSlide) {
-      this.autoSlideImages();
+      //this.autoSlideImages();
     }
   }
   // @HostListener('click', ['$event'])

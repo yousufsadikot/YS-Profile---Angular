@@ -22,7 +22,7 @@
     }
     
     .text-carousel {
-        position: absolute;
+        position: fixed;
         padding: 0;
         top: 287px;
         right: 233px;
@@ -159,6 +159,10 @@
         color: #fff;
         display: block;
         cursor: pointer;
+    }
+
+    .carousel-img-position {
+        background-position:left;
     }
 
     

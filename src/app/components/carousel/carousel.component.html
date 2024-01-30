@@ -8,40 +8,42 @@
       class="fades"
     /> -->
     <div
-      [ngClass]="{ 'image-active': selectedIndex === i }"
+      ngClass="{ 'image-active': selectedIndex === i }"
+      [ngClass]="{
+        'image-active': selectedIndex === i,
+        'carousel-img-position': selectedIndex === 0
+      }"
       [style.backgroundImage]="backgroundImage"
       style="
         height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
       "
+      class="fades"
+    ></div>
+    <div
+      class="fades"
+      [ngClass]="selectedIndex === 2 ? 'text-carousel-third' : 'text-carousel'"
     >
       <div
-        [ngClass]="
-          selectedIndex === 2 ? 'text-carousel-third' : 'text-carousel'
-        "
-        class="fades"
+        class="title-carousel"
+        [ngClass]="{ 'image-active': selectedIndex === i }"
       >
-        <div
-          class="title-carousel"
-          [ngClass]="{ 'image-active': selectedIndex === i }"
-        >
-          {{ selectedIndex === i ? image.title : "" }}
-        </div>
-        <div class="caption-carousel">
-          {{ selectedIndex === i ? image.caption : "" }}
-        </div>
-        <div></div>
-        <a
-          [href]="image.link"
-          class="btn btn-lg btn-primary"
-          *ngIf="selectedIndex === i"
-          appScrollAdjust
-          [appScrollAdjust]="'30'"
-        >
-          {{ image.buttonLabel }}
-        </a>
+        {{ selectedIndex === i ? image.title : "" }}
       </div>
+      <div class="caption-carousel">
+        {{ selectedIndex === i ? image.caption : "" }}
+      </div>
+      <div></div>
+      <a
+        [href]="image.link"
+        class="btn btn-lg btn-primary"
+        *ngIf="selectedIndex === i"
+        appScrollAdjust
+        [appScrollAdjust]="'30'"
+      >
+        {{ image.buttonLabel }}
+      </a>
     </div>
   </div>
 
