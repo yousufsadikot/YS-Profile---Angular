@@ -1,16 +1,20 @@
-.portfolio {
+.portfolio-section {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid rgb(212, 212, 212);
+  text-align: center;
+}
+
+.portfolio-section img {
+  width: auto;
+}
+
+.portfolio-section .port-bage {
+  margin-bottom: 20px;
 }
 
 .portfolio-content {
   margin: 0 60px;
-}
-
-.portfolio-image-holder img {
-  width: 650px;
-  cursor: pointer;
 }
 
 /* .portfolio-image-holder img:hover {
@@ -22,13 +26,6 @@
   right: 100px;
   top: 0;
 } */
-
-.image-container {
-  position: relative;
-  width: 450px; /* adjust as needed */
-  height: 450px; /* adjust as needed */
-  overflow: hidden;
-}
 
 .overlay {
   position: fixed;

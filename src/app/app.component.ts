@@ -16,9 +16,12 @@ export class AppComponent implements OnInit {
       imageSrc: './assets/images/sliders/slider1.jpg',
       imageAlt: 'Yousuf Sadikot',
       title: 'handcrafted',
-      caption: 'Built to provide great user experience',
+      caption:
+        'With over a decade of professional software development expertise, I specialize in crafting unparalleled user experiences across diverse platforms.',
       buttonLabel: 'About me',
+      buttonLabelTwo: 'Work',
       link: '#about-me',
+      likTwo: '#work-experience',
     },
     {
       imageSrc: './assets/images/sliders/slider2.jpg',

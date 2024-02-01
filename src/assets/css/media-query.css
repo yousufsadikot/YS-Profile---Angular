@@ -9,6 +9,22 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  .text-carousel {
+    position: absolute;
+    padding: 0;
+    top: 171px;
+    right: 62px;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+  }
+
+  .caption-carousel {
+    font-size: 1rem;
+    /* line-height: 32px; */
+    color: orange;
+    margin-bottom: 40px;
+  }
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
@@ -20,12 +36,20 @@
   }
   .text-carousel {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
+    top: 77%;
+    left: 34%;
+    margin-bottom: 20px;
     margin-left: -100px;
     color: #fff;
     text-align: left;
+    width: 100%;
+  }
+
+  .caption-carousel {
+    font-size: 1rem;
+    /* line-height: 32px; */
+    color: orange;
+    margin-bottom: 20px;
   }
 }
 

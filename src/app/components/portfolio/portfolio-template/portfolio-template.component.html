@@ -1,0 +1,22 @@
+<div
+  class="d-flex justify-content-center portfolio"
+  *ngIf="portfolioa && portfolioa.length > 0"
+>
+  <div>
+    <div
+      class="portfolio-section"
+      *ngFor="let portfolio of portfolioa; let i = index"
+    >
+      <h2>{{ portfolio.title }}</h2>
+      <p>{{ portfolio.description }}</p>
+      <div class="port-bage">
+        <span
+          *ngFor="let label of portfolio.badgeLabel; let i = index"
+          class="badge bg-secondary ms-1"
+          >{{ label.labelTitle }}</span
+        >
+      </div>
+      <img [src]="portfolio.imageSrc" [alt]="portfolio.imageAlt" />
+    </div>
+  </div>
+</div>

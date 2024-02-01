@@ -25,28 +25,41 @@
       class="fades"
       [ngClass]="selectedIndex === 2 ? 'text-carousel-third' : 'text-carousel'"
     >
-      <div
+      <!-- <div
         class="title-carousel"
         [ngClass]="{ 'image-active': selectedIndex === i }"
       >
         {{ selectedIndex === i ? image.title : "" }}
+      </div> -->
+      <div class="row justify-content-end">
+        <div class="col-md-6">
+          <div class="caption-carousel">
+            {{ selectedIndex === i ? image.caption : "" }}
+          </div>
+          <a
+            [href]="image.link"
+            class="button-carousel"
+            *ngIf="selectedIndex === i"
+            appScrollAdjust
+            [appScrollAdjust]="'30'"
+          >
+            {{ image.buttonLabel }}
+          </a>
+          <a
+            [href]="image.likTwo"
+            class="button-carousel-secondary"
+            *ngIf="selectedIndex === i"
+            appScrollAdjust
+            [appScrollAdjust]="'30'"
+          >
+            {{ image.buttonLabelTwo }}
+          </a>
+        </div>
       </div>
-      <div class="caption-carousel">
-        {{ selectedIndex === i ? image.caption : "" }}
-      </div>
-      <a
-        [href]="image.link"
-        class="btn btn-lg btn-primary"
-        *ngIf="selectedIndex === i"
-        appScrollAdjust
-        [appScrollAdjust]="'30'"
-      >
-        {{ image.buttonLabel }}
-      </a>
     </div>
   </div>
 
-  <div class="carousel-pause-container">
+  <!-- <div class="carousel-pause-container">
     <div class="pause-button" (click)="toggleSlidePause()">
       <i class="fas" [ngClass]="pauseButton ? 'fa-play' : 'fa-pause'"></i>
     </div>
@@ -74,5 +87,5 @@
     (click)="onNextClick()"
   >
     <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i>
-  </button>
+  </button> -->
 </div>

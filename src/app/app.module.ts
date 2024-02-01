@@ -34,6 +34,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { SocialmediaComponent } from './components/socialmedia/socialmedia.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PortfolioTemplateComponent } from './components/portfolio/portfolio-template/portfolio-template.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ScrollAdjustDirective,
     CloseNavDirective,
     SmoothScrollDirective,
+    PortfolioTemplateComponent,
   ],
   imports: [
     BrowserModule,
