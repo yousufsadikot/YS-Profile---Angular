@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
   Portfolio = [
     {
-      imageSrc: '../assets/images/portfolio/rbc-port.jpg',
+      imageSrc: './assets/images/portfolio/rbc-port.jpg',
       imageAlt: 'RBC',
       title: 'RBC WealthTracker',
       description:
@@ -31,7 +31,7 @@ export class PortfolioComponent {
     },
 
     {
-      imageSrc: '../assets/images/portfolio/td-port.png',
+      imageSrc: './assets/images/portfolio/td-port.png',
       imageAlt: 'TD Bank',
       title: 'TD Measurement Solutions',
       description:
@@ -50,7 +50,7 @@ export class PortfolioComponent {
       link: '',
     },
     {
-      imageSrc: '../assets/images/portfolio/scotia-port.jpg',
+      imageSrc: './assets/images/portfolio/scotia-port.jpg',
       imageAlt: 'Scotiabank Online Banking',
       title: 'Scotiabank',
       description:
@@ -69,7 +69,7 @@ export class PortfolioComponent {
       link: '',
     },
     {
-      imageSrc: '../assets/images/portfolio/neulion-port.png',
+      imageSrc: './assets/images/portfolio/neulion-port.png',
       imageAlt: 'Neulion',
       title: 'Neulion',
       description:

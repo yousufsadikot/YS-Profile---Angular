@@ -57,37 +57,38 @@
 }
 
 .button-carousel {
-  display: inline;
-  min-width: 120px;
+  display: inline-block;
+  min-width: 135px;
   font-size: 1rem;
+  text-align: center;
+  padding: 10px 0px;
+  margin-right: 20px;
+}
+
+.button-ys-primary {
   background-color: #0d6efd;
   color: #fff;
-  padding: 10px 30px;
-  margin-right: 20px;
   border: 1px solid #0b5fdd;
   text-decoration: none;
 }
 
-.button-carousel-secondary {
-  display: inline;
-  min-width: 120px;
-  font-size: 1rem;
+.button-ys-yellow {
   background-color: orange;
   color: #fff;
-  padding: 10px 30px;
-  margin-right: 20px;
   border: 1px solid rgb(139, 94, 9);
   text-decoration: none;
 }
 
-.button-carousel-secondary:hover {
-  display: inline;
-  min-width: 120px;
-  font-size: 1rem;
+.button-ys-primary:hover {
+  background-color: #083c8b;
+  color: #ebeaef;
+  border: 1px solid #0b5fdd;
+  text-decoration: none;
+}
+
+.button-ys-yellow:hover {
   background-color: rgb(206, 136, 7);
   color: #fff;
-  padding: 10px 30px;
-  margin-right: 20px;
   border: 1px solid rgb(139, 94, 9);
   text-decoration: none;
 }

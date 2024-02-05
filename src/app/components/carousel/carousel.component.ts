@@ -4,7 +4,10 @@ import {
   HostListener,
   Input,
   OnInit,
+  HostBinding,
+  Renderer2,
 } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 interface CarcelImages {
   imageSrc: string;
@@ -33,37 +36,67 @@ export class CarouselComponent implements OnInit {
   pauseButton = false;
 
   selectedIndex = 0;
+  textOption = false;
 
-  get backgroundImage() {
-    return `url(${this.images[this.selectedIndex].imageSrc})`;
-  }
+  // get backgroundImage() {
+  //   return `url(${this.images[this.selectedIndex].imageSrc})`;
+  // }
 
-  constructor(private el: ElementRef) {}
+  @HostBinding('style.backgroundImage') backgroundImage: string;
+
+  constructor(
+    private el: ElementRef,
+    private breakpointObserver: BreakpointObserver,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit(): void {
     if (this.autoSlide) {
       //this.autoSlideImages();
     }
+
+    this.breakpointObserver
+      .observe([
+        Breakpoints.Handset,
+        Breakpoints.Tablet,
+        Breakpoints.Web,
+        Breakpoints.HandsetPortrait,
+        Breakpoints.TabletPortrait,
+        Breakpoints.WebPortrait,
+      ])
+      .subscribe((result) => {
+        if (result.matches) {
+          if (
+            result.breakpoints[Breakpoints.Handset] ||
+            result.breakpoints[Breakpoints.HandsetPortrait]
+          ) {
+            this.selectedIndex === 0
+              ? this.setBackgroundImage(
+                  'url("/assets/images/sliders/slider-sm-1.jpg")'
+                )
+              : '';
+            this.textOption = false;
+          } else if (
+            result.breakpoints[Breakpoints.Tablet] ||
+            result.breakpoints[Breakpoints.TabletPortrait]
+          ) {
+            this.setBackgroundImage('url("/assets/tablet-background.jpg")');
+            this.textOption = true;
+          } else {
+            this.selectedIndex === 0
+              ? this.setBackgroundImage(
+                  'url("./assets/images/sliders/slider1.jpg")'
+                )
+              : '';
+            this.textOption = true;
+          }
+        }
+      });
   }
-  // @HostListener('click', ['$event'])
-  // onClick(event: Event) {
-  //   event.preventDefault();
 
-  //   // Check if 'href' attribute exists
-  //   const hrefAttribute = this.el.nativeElement.getAttribute('href');
-  //   if (!hrefAttribute) {
-  //     console.error("Missing 'href' attribute on the element.");
-  //     return;
-  //   }
-
-  //   const targetId = hrefAttribute.substring(1);
-  //   const targetElement = document.getElementById(targetId);
-
-  //   if (targetElement) {
-  //     const targetOffset = targetElement.offsetTop - this.adjustAmount;
-  //     window.scrollTo({ top: targetOffset, behavior: 'smooth' });
-  //   }
-  // }
+  setBackgroundImage(imageUrl: string) {
+    this.backgroundImage = imageUrl;
+  }
 
   autoSlideImages(): void {
     setInterval(() => {

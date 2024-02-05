@@ -33,12 +33,12 @@
       </div> -->
       <div class="row justify-content-end">
         <div class="col-md-6">
-          <div class="caption-carousel">
+          <div *ngIf="textOption" class="caption-carousel">
             {{ selectedIndex === i ? image.caption : "" }}
           </div>
           <a
             [href]="image.link"
-            class="button-carousel"
+            class="button-carousel button-ys-primary"
             *ngIf="selectedIndex === i"
             appScrollAdjust
             [appScrollAdjust]="'30'"
@@ -47,7 +47,7 @@
           </a>
           <a
             [href]="image.likTwo"
-            class="button-carousel-secondary"
+            class="button-carousel button-ys-yellow"
             *ngIf="selectedIndex === i"
             appScrollAdjust
             [appScrollAdjust]="'30'"

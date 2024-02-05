@@ -31,26 +31,20 @@
 }
 
 @media all and (max-width: 480px) {
-  .carousel-img-position {
-    background-position: -317px 44px;
-  }
   .text-carousel {
     position: absolute;
+    padding: 0;
     top: 77%;
-    left: 34%;
-    margin-bottom: 20px;
-    margin-left: -100px;
+    right: 10%;
     color: #fff;
-    text-align: left;
-    width: 100%;
   }
 
-  .caption-carousel {
-    font-size: 1rem;
-    /* line-height: 32px; */
+  /* .caption-carousel {
+    font-size: 1.3rem;
     color: orange;
+    padding: 0 15px;
     margin-bottom: 20px;
-  }
+  } */
 }
 
 /* Portrait */
