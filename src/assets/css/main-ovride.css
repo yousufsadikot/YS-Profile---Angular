@@ -220,11 +220,15 @@ ul.job-description li {
 
 .contact .contact-icons {
   font-size: 2rem;
-  padding-right: 15px;
+  padding-right: 0;
   position: relative;
   top: -9px;
 }
 
+.contact a {
+  text-decoration: none;
+  color: #777777;
+}
 .contact-icons .icon-shadow {
   color: #ffffff;
   /* text-shadow: 0 22px 10px rgba(5, 5, 5, 0.8); */
