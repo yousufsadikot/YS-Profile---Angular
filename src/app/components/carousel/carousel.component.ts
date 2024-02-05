@@ -72,7 +72,7 @@ export class CarouselComponent implements OnInit {
           ) {
             this.selectedIndex === 0
               ? this.setBackgroundImage(
-                  'url("/assets/images/sliders/slider-sm-1.jpg")'
+                  'url("./assets/images/sliders/slider-sm-1.jpg")'
                 )
               : '';
             this.textOption = false;

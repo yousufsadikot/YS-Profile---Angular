@@ -1,5 +1,6 @@
 /* ------------------ BASE STYLES ------------------ */
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -16,13 +17,13 @@ body {
 /* ------------------ Navbar ------------------ */
 .navbar-dark {
   --bs-bg-opacity: 1;
- background-color: rgb(90, 90, 90)!important; 
+  background-color: rgb(90, 90, 90) !important;
 }
 
 .navbar-light {
   --bs-bg-opacity: 1;
- background-color: rgb(245, 245, 245)!important;
- border-bottom: 1px solid rgb(206, 206, 206)!important;; 
+  background-color: rgb(245, 245, 245) !important;
+  border-bottom: 1px solid rgb(206, 206, 206) !important;
 }
 .navbar-brand img {
   width: 265px;
@@ -30,90 +31,89 @@ body {
 }
 
 /* ------------------ Main shell ------------------ */
-.main-content
-{
-    width: 100%;
-    height: 100%;
+.main-content {
+  width: 100%;
+  height: 100%;
 }
 
-.header-content{
-    height: 100vh;
-    width : 100%;
-    background-color: rgb(255, 255, 255);
+.header-content {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
 }
 
-section::before
-{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    /* width: 100%;
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* width: 100%;
     height: 100px; */
-    z-index: 10000;
+  z-index: 10000;
 }
 
-section::after
-{
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-   /* width: 100%;
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
     height: 100%; */
-    z-index: 10000;
+  z-index: 10000;
 }
 
 .box {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    flex-direction: space-evenly;
-    align-items: center;
-    /* border: 1px solid transparent(rgba(255,255,255,0.279), 0.5);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: space-evenly;
+  align-items: center;
+  /* border: 1px solid transparent(rgba(255,255,255,0.279), 0.5);
     text-shadow: 0 0 1em transparent(black, 0.5);
     background: transparentize(rgba(29, 27, 27, 0.259), 0.8);
     backdrop-filter: blur(20px); */
-    z-index: 1;
+  z-index: 1;
 }
-
-
 
 #text {
-    position: relative;
-    /* color: white;
+  position: relative;
+  /* color: white;
     font-size: 10em; */
-    /* z-index: 1; */
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  /* z-index: 1; */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-
-.section-light{
-    padding: 50px 0;
-    width: 100%;
-    background-color: #f7f7f7;
+.section-light {
+  padding: 50px 0;
+  width: 100%;
+  background-color: #f7f7f7;
 }
 
-.section-white{
-    padding: 50px 0;
-    width: 100%;
-    background-color: #ffff;
+.section-white {
+  padding: 50px 0;
+  width: 100%;
+  background-color: #ffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: #646464;
@@ -157,51 +157,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .job-profile {
-    display: flex;
-    margin-bottom: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
-.job-profile .company-logo{
-    margin-right: 30px;
-    
+.job-profile .company-logo {
+  margin-right: 30px;
 }
-.job-profile .company-logo img{
-    width: 75px;
-    
+.job-profile .company-logo img {
+  width: 75px;
 }
 
 .experience-section h3 {
-    font-weight: 700!important;
-    line-height: 26px;
+  font-weight: 700 !important;
+  line-height: 26px;
 }
 .experience-section p {
-    margin: 0 0 10px;
-    line-height: 14px;
+  margin: 0 0 10px;
+  line-height: 14px;
 }
 experience-section strong {
- font-weight: 600;
+  font-weight: 600;
 }
-ul.job-brief  {
-    list-style: none;
-    margin-top: 15px;
-    padding-left: 0!important;
+ul.job-brief {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0 !important;
 }
-ul.job-brief  li{
-    padding-bottom: 20px!important;
+ul.job-brief li {
+  padding-bottom: 20px !important;
 }
-ul.job-description  {
+ul.job-description {
   list-style: square;
   margin-top: 15px;
-  padding-left: 0!important;
+  padding-left: 0 !important;
 }
-ul.job-description li{
+ul.job-description li {
   margin-left: 20px;
-  padding-bottom: 10px!important;
+  padding-bottom: 10px !important;
 }
 
 /************** Technical Skilss *************/
-.skill-item{
-  padding-left: 13px
+.skill-item {
+  padding-left: 13px;
 }
 
 .skill-item h3 {
@@ -213,28 +211,25 @@ ul.job-description li{
 }
 
 .skill-item ul {
-  list-style-type: none!important;
-  list-style-position: inside!important;
-  padding-left: 0!important;
-
+  list-style-type: none !important;
+  list-style-position: inside !important;
+  padding-left: 0 !important;
 }
 
 /************** contact *************/
 
-.contact .contact-icons{
+.contact .contact-icons {
   font-size: 2rem;
   padding-right: 15px;
   position: relative;
-  top:-3px;
+  top: -9px;
 }
 
 .contact-icons .icon-shadow {
   color: #ffffff;
-  text-shadow: 0 22px 10px rgba(5, 5, 5, 0.8);
+  /* text-shadow: 0 22px 10px rgba(5, 5, 5, 0.8); */
   font-size: 13px;
-  /* z-index: -1; */
   position: absolute;
-  top: 13px;
-  left: 7px;
+  top: 14px;
+  margin-left: -17px;
 }
-
